@@ -47,6 +47,9 @@ namespace PSSM
             // exit if path is empty or null
             if (path == "" || path == null) return;
 
+            // If folder containg song have non-unicode or non-ascii character - song is not added to list (IniFile class fails to find the file)
+            // See #1 (https://github.com/oustish/PSSM/issues/1)
+            // TODO: fix or find workaround
             string[] files = Directory.GetFiles(@path, "song.ini", SearchOption.AllDirectories);
 
             // disabling MainWindow so no action (event) can be raised
