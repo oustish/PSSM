@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace PSSM.Classes
 {
+    /// <summary>
+    /// Class that houses static methods used acros project in various places
+    /// </summary>
     public static class PSSM
     {
         /// <summary>

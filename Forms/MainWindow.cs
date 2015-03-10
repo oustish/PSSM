@@ -12,6 +12,9 @@ using PSSM.Classes;
 
 namespace PSSM
 {
+    /// <summary>
+    /// MainWindows class (inherited from Form) is main app class executing most of the work.
+    /// </summary>
     public partial class MainWindow : Form
     {
         private SongsDatabase sDatabase = null;
@@ -54,12 +57,16 @@ namespace PSSM
             Application.DoEvents();
 
             // using parallelized foreach because files are small (<1KB) and fetching them takes more time than processing them
-            Parallel.ForEach(files, cFile => {
+            // scratch that, it does not work as expected - reverting back to regular foreach
+            /*Parallel.ForEach(files,  cFile => {
                 sDatabase.AddSong(cFile);
                 Application.DoEvents(); // no problem since MainWindow is !Enabled
-            });
-
-            
+            });*/
+            foreach (var cFile in files)
+            {
+                sDatabase.AddSong(cFile);
+                Application.DoEvents(); // no problem since MainWindow is !Enabled
+            }
 
             // statuslabel update
             statusLabel.Text = "Songs folder scanned (found " + sDatabase.Count + " songs). Now filling list view, please wait...";
@@ -70,11 +77,15 @@ namespace PSSM
 
             // reenabling MainWindow
             this.Enabled = true;
+
+            // statuslabel update
+            statusLabel.Text = "Finished scan (found " + sDatabase.Count + " songs) and filling list view.";
+            Application.DoEvents();
         }
 
-        /**
+        /*
          * FILE menu items actions
-         **/
+         */
 
         /// <summary>
         /// Method for showing user a dialog allowing him to point program to Phase Shift executable file.

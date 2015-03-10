@@ -9,6 +9,9 @@ namespace PSSM.Classes
     /// </summary>
     public class IniFile
     {
+        /// <summary>
+        /// Path to INI file
+        /// </summary>
         public string path;
 
         [DllImport("kernel32")]
