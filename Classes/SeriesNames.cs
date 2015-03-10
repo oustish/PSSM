@@ -117,7 +117,7 @@ namespace PSSM.Classes
 
         public string GetFullName(string _series)
         {
-            if (_series.Trim() == "") return "";
+            if (_series == null || _series.Trim() == "") return "";
 
             else if (series.ContainsKey(_series.Trim()))
             {

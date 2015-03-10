@@ -41,7 +41,7 @@ namespace PSSM.Classes
         /// Value Name
         public void IniWriteValue(string Section, string Key, string Value)
         {
-            WritePrivateProfileString(Section, Key, Value, this.path);
+            WritePrivateProfileString(Section, Key, Value, path);
         }
 
         /// <summary>
@@ -53,9 +53,9 @@ namespace PSSM.Classes
         /// <returns></returns>
         public string IniReadValue(string Section, string Key)
         {
-            StringBuilder temp = new StringBuilder(255);
+            StringBuilder temp = new StringBuilder(512);
             int i = GetPrivateProfileString(Section, Key, "", temp,
-                                            255, this.path);
+                                            512, path);
             return temp.ToString();
 
         }

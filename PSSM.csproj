@@ -45,7 +45,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\IniFile.cs" />
+    <Compile Include="Classes\IniParser\Exceptions\ParsingException.cs" />
+    <Compile Include="Classes\IniParser\FileIniParser.cs" />
+    <Compile Include="Classes\IniParser\Helpers\Assert.cs" />
+    <Compile Include="Classes\IniParser\Model\Configuration\BaseIniParserConfiguration.cs" />
+    <Compile Include="Classes\IniParser\Model\Configuration\DefaultIniParserConfiguration.cs" />
+    <Compile Include="Classes\IniParser\Model\Configuration\IIniParserConfiguration.cs" />
+    <Compile Include="Classes\IniParser\Model\Formatting\DefaultIniDataFormatter.cs" />
+    <Compile Include="Classes\IniParser\Model\Formatting\IIniDataFormatter.cs" />
+    <Compile Include="Classes\IniParser\Model\IniData.cs" />
+    <Compile Include="Classes\IniParser\Model\KeyData.cs" />
+    <Compile Include="Classes\IniParser\Model\KeyDataCollection.cs" />
+    <Compile Include="Classes\IniParser\Model\SectionData.cs" />
+    <Compile Include="Classes\IniParser\Model\SectionDataCollection.cs" />
+    <Compile Include="Classes\IniParser\Parser\IniDataParser.cs" />
+    <Compile Include="Classes\IniParser\StreamIniDataParser.cs" />
+    <Compile Include="Classes\IniParser\StringIniParser.cs" />
     <Compile Include="Classes\ListViewColumnSorter.cs" />
     <Compile Include="Classes\PSSM.cs" />
     <Compile Include="Classes\SeriesNames.cs" />

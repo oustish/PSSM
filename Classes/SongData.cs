@@ -11,7 +11,7 @@ namespace PSSM.Classes
     class SongData
     {
         private string _path = null;
-        private IniFile _ini = null;
+        private IniParser.Model.IniData _ini = null;
         private string md5hash = null;
 
         public string path
@@ -35,28 +35,23 @@ namespace PSSM.Classes
         /// <param name="path">Path to song.ini file</param>
         public SongData(string path)
         {
-            this._path = @Path.GetDirectoryName(path);
-            this._ini = new IniFile(path);
-        }
+            this._path = Path.GetDirectoryName(path);
 
-        /// <summary>
-        /// Creates SongData object from given IniFile object.
-        /// </summary>
-        /// <param name="inifile">IniFile object containing path to song.ini file</param>
-        public SongData(IniFile inifile)
-        {
-            this._ini = inifile;
-            this._path = @Path.GetDirectoryName(inifile.path);
+            var parser = new IniParser.FileIniDataParser();
+            this._ini = parser.ReadFile(path);
         }
 
         public string GetValue(string section, string key)
         {
-            return this._ini.IniReadValue(section, key);
+            return this._ini[section][key];
         }
 
         public void SetValue(string section, string key, string value)
         {
-            this._ini.IniWriteValue(section, key, value);
+            var parser = new IniParser.FileIniDataParser();
+            this._ini[section][key] = value;
+            parser.WriteFile(this._path + @"\song.ini", this._ini);
+            
         }
 
         public void SetValue(string section, string key, int value)
@@ -70,7 +65,7 @@ namespace PSSM.Classes
             if (this.md5hash != "" && this.md5hash != null) return this.md5hash;
 
             var md5 = MD5.Create();
-            var stream = File.OpenRead(this._path + "/notes.mid");
+            var stream = File.OpenRead(this._path + @"\notes.mid");
             string hash = BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", "").ToLower();
 
             // dispose everything not needed

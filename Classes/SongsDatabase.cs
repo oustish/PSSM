@@ -29,12 +29,6 @@ namespace PSSM.Classes
             songs.Add(sd);
         }
 
-        public void AddSong(IniFile ini)
-        {
-            SongData sd = new SongData(ini);
-            songs.Add(sd);
-        }
-
         public void AddSong(SongData sd)
         {
             songs.Add(sd);
@@ -45,18 +39,27 @@ namespace PSSM.Classes
             List<ListViewItem> output = new List<ListViewItem>();
             SeriesNames sn = new SeriesNames();
 
+            int debugIndex = -1; // first song will have index==0
             foreach(SongData song in this.songs) {
+                debugIndex++;
                 if (song == null) continue;
 
                 string artist = song.GetValue("song", "artist");
+                if (String.IsNullOrEmpty(artist)) { artist = ""; }
+
                 string name   = song.GetValue("song", "name");
+                if (String.IsNullOrEmpty(name)) { name = ""; }
+
                 string album  = song.GetValue("song", "album");
+                if (String.IsNullOrEmpty(album)) { album = ""; }
+
                 string icon   = song.GetValue("song", "icon");
+                if (String.IsNullOrEmpty(icon)) { icon = ""; }
 
                 if ((artist == "" || artist == null) && (name == "" || name == null))
                 {
                     // debug
-                    Console.WriteLine("Song '" + song.path + "' does not contain any data (?)");
+                    Console.WriteLine("Song '" + song.path + "' (" + debugIndex + ") does not contain any data (?)");
                     continue;
                 }
 
