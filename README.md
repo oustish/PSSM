@@ -2,7 +2,7 @@
 __Phase Shift Songs Manager__ is meant to be a simple, yet powerfull manager for Phase Shift songs allowing numer of operations to be taken upon those songs.  
   
 ## TODO list:
-* double click on song will launch it in Phase Shift (either in normal or in practice mode) [will be official v1.0 after this],
+* ~~double click on song will launch it in Phase Shift (either in normal or in practice mode) [will be official v0.1 after beta testing this]~~,
 * __song.ini__ tags editor (for both individual songs and whole collections),
 * simple audio player based on FMOD,
 * _Kamikaze mode_ - extremly fast launch of the song by modifying game settings "_just in time_",
