@@ -5,6 +5,7 @@ namespace IniParser.Exceptions
     /// <summary>
     /// Represents an error ococcurred while parsing data 
     /// </summary>
+    [Serializable]
     public class ParsingException : Exception
     {
         /// <summary>

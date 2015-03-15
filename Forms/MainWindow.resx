@@ -117,10 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="songsListViewContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>372, 8</value>
+  </metadata>
   <metadata name="mainWindowMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>14, 7</value>
   </metadata>
   <metadata name="mainWindowStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>190, 8</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAD///8A////AP///wD///8A////AP///wDGxsY3YmJim////wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8ASkpKswAAAP3y8vIK////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////ABQUFOkAAAD9+vr6A////wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AOrq6hIAAAD9JCQk2v///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////APDw8AxmZmaXAAAA/1hYWKX///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wCurq5NAAAA/wAAAP8QEBDtbm5ujtzc
+        3B////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A+vr6ARYWFucAAAD9CAgI9QAA
+        AP8EBAT4cHBwjvDw8Az///8A////AP///wD///8A////AP///wD///8A////AOjo6BQAAAD9KCgo1uzs
+        7BGOjo5vGhoa4wAAAP8kJCTZ3NzcIf///wD///8A////AP///wD///8A////AP///wDKysoyAAAA/0xM
+        TLH///8A////APLy8gpcXFyhAAAA/ygoKNX29vYH////AP///wD///8A////AP///wD///8AsLCwTQAA
+        AP9kZGSZ////AP///wD///8A+Pj4BS4uLs8AAAD/pqamV////wD///8A////AP///wD///8A////AKCg
+        oF0AAAD/eHh4hP///wD///8A////AP///wB+fn5+AAAA/4CAgHz///8A////AP///wD///8A////AP//
+        /wCMjIxxAAAA/4qKinT///8A////AP///wDKysoyHh4e3gAAAP+kpKRZ////AP///wD///8A////AP//
+        /wD///8AgICAfAAAAP+YmJhk3t7eH5iYmGRERES5AAAA/QAAAP1aWlqj+vr6Af///wD///8A////AP//
+        /wD///8AdHR0igQEBPgAAAD/CgoK8wAAAP0AAAD/AAAA/zg4OMa0tLRK/Pz8AP///wD///8A////AP//
+        /wD///8A////AHp6eoQGBgb4AAAA/wICAvwoKCjVcnJyi8rKyjL///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8AyMjIMzIyMsqOjo5v/Pz8AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A/v8AAPz/AAD8/wAA/P8AAPj/AAD4fwAA+B8AAPmPAAD5xwAA+ecAAPn3AAD75wAA+4cAAOAf
+        AADgfwAA+/8AAA==
+</value>
+  </data>
 </root>

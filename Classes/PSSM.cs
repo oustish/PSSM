@@ -17,7 +17,7 @@ namespace PSSM.Classes
         /// </summary>
         /// <param name="force">Determines if method should display a dialog even if the path was already specified.</param>
         /// <returns>String containing path to PS exe file.</returns>
-        public static string selectPSexe(bool force)
+        public static string selectPSexe(bool force = false)
         {
             string psexe = Properties.Settings.Default.PSexe;
 
@@ -48,11 +48,46 @@ namespace PSSM.Classes
         }
 
         /// <summary>
+        /// Main static method to select Editor On Fire executable file.
+        /// </summary>
+        /// <param name="force">Determines if method should display a dialog even if the path was already specified.</param>
+        /// <returns>String containing path to EOF exe file.</returns>
+        public static string selectEOFexe(bool force = false)
+        {
+            string eofexe = Properties.Settings.Default.EOFexe;
+
+            if (eofexe == "" || force)
+            {
+                OpenFileDialog opf = new OpenFileDialog();
+                opf.CheckFileExists = true;
+                opf.CheckPathExists = true;
+                opf.DereferenceLinks = true;
+                opf.Filter = "Editor On Fire executable|eof.exe";
+                opf.Multiselect = false;
+                opf.Title = "Select Editor On Fire executable file (eof.exe)";
+
+                DialogResult opf_dr = opf.ShowDialog();
+
+                if (opf_dr == DialogResult.OK)
+                {
+                    eofexe = opf.FileName;
+                    Properties.Settings.Default.EOFexe = eofexe;
+                    Properties.Settings.Default.Save();
+                }
+                return eofexe;
+            }
+            else
+            {
+                return eofexe;
+            }
+        }
+
+        /// <summary>
         /// Main static method to select folder containing PS songs.
         /// </summary>
         /// <param name="force">Determines if method should display a dialog even if the path was already specified.</param>
         /// <returns>String containing path to PS songs folder.</returns>
-        public static string selectSongsFolder(bool force)
+        public static string selectSongsFolder(bool force = false)
         {
             string songsFolder = Properties.Settings.Default.songsFolder;
 

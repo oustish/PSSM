@@ -46,5 +46,29 @@ namespace PSSM.Properties {
                 this["songsFolder"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string EOFexe {
+            get {
+                return ((string)(this["EOFexe"]));
+            }
+            set {
+                this["EOFexe"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int defaultDbcAction {
+            get {
+                return ((int)(this["defaultDbcAction"]));
+            }
+            set {
+                this["defaultDbcAction"] = value;
+            }
+        }
     }
 }
